@@ -7,16 +7,14 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-
-namespace Shopping
+namespace Shopping.ListaZakupow
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Settings : ContentPage
+	public partial class BasicList : ContentPage
 	{
-		public Settings()
+		public BasicList ()
 		{
-            InitializeComponent();
-            
-        }
+			InitializeComponent ();
+		}
 	}
 }

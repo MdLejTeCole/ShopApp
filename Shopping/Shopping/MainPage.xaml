@@ -4,9 +4,9 @@
              xmlns:local="clr-namespace:Shopping"
              x:Class="Shopping.MainPage"
              IsPresented="true"
-                  Title="cos">
+             Title="znikaj">
     <MasterDetailPage.Master>
-        <ContentPage Title="Contacts">
+        <ContentPage Padding="0,0,0,0" Title="Contacts">
             <ListView x:Name="listView" ItemSelected="ListView_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>

@@ -6,7 +6,7 @@
   
         <StackLayout>
             <Label Text="{Binding Name}"/>
-            <Label Text="AddPage"/>
+            <Label x:Name="AddPage111"/>
         </StackLayout>
    
 </ContentPage>
