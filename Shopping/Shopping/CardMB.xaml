@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Shopping.CardMB">
+    <Grid BackgroundColor="Red">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <Image x:Name="kod"
+               Grid.Row="1"
+               Grid.Column="1"
+               Grid.ColumnSpan="3"             
+               Source="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/EAN13.svg/1200px-EAN13.svg.png"/>
+        <Image x:Name="logo"
+               Grid.Row="3"
+               Grid.Column="3"
+               Grid.RowSpan="2"
+               Source="http://www.instalki.pl/images/newsy/kwiecien_2015/biedronka-logo.jpg"/>
+        <Label Text="Infolinia:"
+               Grid.Row="3"
+               Grid.Column="1"/>
+        <Label Text="+00 000 000 000"
+               Grid.Row="4"
+               Grid.Column="1"/>
+
+    </Grid>
+</ContentPage>

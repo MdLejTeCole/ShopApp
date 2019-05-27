@@ -15,6 +15,16 @@ namespace Shopping.ListaZakupow
 		public BasicList ()
 		{
 			InitializeComponent ();
-		}
-	}
+            listView.ItemsSource = new List<Categories>
+            {
+                new Categories {Categoria="Strona główna", Status=false},
+                new Categories {Categoria="Promocje", Status=false},              
+            };
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
