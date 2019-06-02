@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,14 +13,28 @@ namespace Shopping
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Newspaper : ContentPage
     {
+        Image[] imageName = new Image[8];
         public Newspaper()
         {
             InitializeComponent();
-            var scroll = new ScrollView();
-            Content = scroll;
-            var stack = new StackLayout();
-            stack.Children.Add(new BoxView { BackgroundColor = Color.Red, HeightRequest = 600, WidthRequest = 600 });
-            stack.Children.Add(new Entry());
+            imageName[0] = image1;
+            imageName[1] = image2;
+            imageName[2] = image3;
+            imageName[3] = image4;
+            imageName[4] = image5;
+            imageName[5] = image6;
+            imageName[6] = image7;
+            imageName[7] = image8;
+            //SqlConnection sqlConnection = new SqlConnection("Server = .\\MDLEJTECOLE; Database = Shop; Trusted_Connection = True;");
+            //sqlConnection.Open();
+            //for (int i = 1; i < 9; i++)
+            //{
+            //    SqlCommand cmd = new SqlCommand("SELECT Link FROM Gazetka WHERE Id =" + i, sqlConnection);
+            //    SqlDataReader reader = cmd.ExecuteReader();
+            //    reader.Read();
+            //    imageName[i - 1].Source = reader.GetString(0);
+            //    reader.Close();               
+            //}          
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Shopping
             listView.ItemsSource = new List<NextPages>
             {               
                 new NextPages {Name="Strona główna", ImageUrl="http://wiki.dwscoalition.org/wiki/images/3/3f/Userhead-100x100-unfaded.png", NewPages=new FirstPage()},
-                new NextPages {Name="Promocje", ImageUrl="http://wiki.dwscoalition.org/wiki/images/3/3f/Userhead-100x100-unfaded.png", NewPages=new Newspaper()},
+                new NextPages {Name="Gazetka", ImageUrl="http://wiki.dwscoalition.org/wiki/images/3/3f/Userhead-100x100-unfaded.png", NewPages=new Newspaper()},
                 new NextPages {Name="Karta MB", ImageUrl="http://wiki.dwscoalition.org/wiki/images/3/3f/Userhead-100x100-unfaded.png", NewPages=new CardMB()},
                 new NextPages {Name="Lista zakupów", ImageUrl="http://wiki.dwscoalition.org/wiki/images/3/3f/Userhead-100x100-unfaded.png", NewPages = new Lista()},
                 new NextPages {Name="Skaner", ImageUrl="http://wiki.dwscoalition.org/wiki/images/3/3f/Userhead-100x100-unfaded.png", NewPages=new AddPage()},
