@@ -25,16 +25,17 @@ namespace Shopping
             imageName[5] = image6;
             imageName[6] = image7;
             imageName[7] = image8;
-            //SqlConnection sqlConnection = new SqlConnection("Server = .\\MDLEJTECOLE; Database = Shop; Trusted_Connection = True;");
-            //sqlConnection.Open();
-            //for (int i = 1; i < 9; i++)
-            //{
-            //    SqlCommand cmd = new SqlCommand("SELECT Link FROM Gazetka WHERE Id =" + i, sqlConnection);
-            //    SqlDataReader reader = cmd.ExecuteReader();
-            //    reader.Read();
-            //    imageName[i - 1].Source = reader.GetString(0);
-            //    reader.Close();               
-            //}          
+            SqlConnection sqlConnection = new SqlConnection("Server=tcp:mdlejtecole.database.windows.net,1433;Initial Catalog=ShopApp1;Persist Security Info=False;" +
+                "User ID=MDlejtecole;Password=muza!345;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            sqlConnection.Open();
+            for (int i = 1; i < 9; i++)
+            {
+                SqlCommand cmd = new SqlCommand("SELECT Link FROM Gazetka WHERE Id =" + i, sqlConnection);
+                SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+                imageName[i - 1].Source = reader.GetString(0);
+                reader.Close();
+            }
         }
     }
 }

@@ -20,9 +20,8 @@ namespace Shopping
                 new NextPages {Name="Karta MB", ImageUrl="http://wiki.dwscoalition.org/wiki/images/3/3f/Userhead-100x100-unfaded.png", NewPages=new CardMB()},
                 new NextPages {Name="Lista zakupów", ImageUrl="http://wiki.dwscoalition.org/wiki/images/3/3f/Userhead-100x100-unfaded.png", NewPages = new Lista()},
                 new NextPages {Name="Skaner", ImageUrl="http://wiki.dwscoalition.org/wiki/images/3/3f/Userhead-100x100-unfaded.png", NewPages=new AddPage()},
-                new NextPages {Name="Profil", ImageUrl="http://wiki.dwscoalition.org/wiki/images/3/3f/Userhead-100x100-unfaded.png", NewPages = new Settings()},
-                new NextPages {Name="Ustawienia", ImageUrl="http://wiki.dwscoalition.org/wiki/images/3/3f/Userhead-100x100-unfaded.png", NewPages=new AddPage()},
-                new NextPages {Name="Wiecej informacji", ImageUrl="http://wiki.dwscoalition.org/wiki/images/3/3f/Userhead-100x100-unfaded.png", NewPages = new Settings()},
+                new NextPages {Name="Profil", ImageUrl="http://wiki.dwscoalition.org/wiki/images/3/3f/Userhead-100x100-unfaded.png", NewPages = new Profile()},
+                new NextPages {Name="Ustawienia", ImageUrl="http://wiki.dwscoalition.org/wiki/images/3/3f/Userhead-100x100-unfaded.png", NewPages=new Settings()},
                 new NextPages {Name="Pomoc", ImageUrl="http://wiki.dwscoalition.org/wiki/images/3/3f/Userhead-100x100-unfaded.png", NewPages = new Settings()}
             };
             

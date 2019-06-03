@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,10 +22,18 @@ namespace Shopping
         public FirstPage ()
 		{
 			InitializeComponent ();
-            TabUrl[0] = "https://static.wirtualnemedia.pl/media/top/Biedronka-WielkanocSlodziaki655.png";
-            TabUrl[1] = "https://i.ytimg.com/vi/BK-agFKy8a0/maxresdefault.jpg";
-            TabUrl[2] = "http://wybieramkonto.pl/wp-content/uploads/2019/01/400ZL-DO-BIEDRONKA.png";
-            TabUrl[3] = "https://g.eu003.leafletcdns.com/pl/data/18/15547/0_s.jpg?t=1556700848";
+
+            SqlConnection sqlConnection = new SqlConnection("Server=tcp:mdlejtecole.database.windows.net,1433;Initial Catalog=ShopApp1;Persist Security Info=False;" +
+                "User ID=MDlejtecole;Password=muza!345;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            sqlConnection.Open();
+            for (int i = 1; i < 5; i++)
+            {
+                SqlCommand cmd = new SqlCommand("SELECT Link FROM Reklamy WHERE Id =" + i, sqlConnection);
+                SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+                TabUrl[i - 1] = reader.GetString(0);
+                reader.Close();
+            }
             ad.Source = TabUrl[0];
             TabUrl2[0] = "https://vallecentral.cl/ipvc/images/images-slide/boat.png";
             TabUrl2[1] = "https://www.ypoint.de/gfx/gelberPunkt.png";

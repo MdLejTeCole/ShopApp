@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,11 +16,25 @@ namespace Shopping.ListaZakupow
 		public BasicList ()
 		{
 			InitializeComponent ();
-            listView.ItemsSource = new List<Categories>
+            List<Categories> cat = new List<Categories>();
+ 
+            SqlConnection sqlConnection = new SqlConnection("Server=tcp:mdlejtecole.database.windows.net,1433;Initial Catalog=ShopApp1;Persist Security Info=False;" +
+               "User ID=MDlejtecole;Password=muza!345;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            sqlConnection.Open();
+            bool exist = true;
+           
+            for (int i = 1; i < 18; i++)
             {
-                new Categories {Categoria="Strona główna", Status=false},
-                new Categories {Categoria="Promocje", Status=false},              
-            };
+
+            
+                SqlCommand cmd = new SqlCommand("SELECT PodKategoria FROM Kategorie WHERE IdKategoria =" + i, sqlConnection);
+                SqlDataReader reader = cmd.ExecuteReader();
+                reader.Read();
+                cat.Add(new Categories() { Categoria = reader.GetString(0), Status = false });                               
+                reader.Close();
+
+            }
+            listView.ItemsSource = cat;
         }
 
         private void Button_Clicked(object sender, EventArgs e)
