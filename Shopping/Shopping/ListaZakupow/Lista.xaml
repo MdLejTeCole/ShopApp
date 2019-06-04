@@ -10,7 +10,8 @@
                 Clicked="BasicList_Clicked"    />
             <Button Text="Otwórz listę zakupów"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand" 
+                Clicked="Button_Clicked"/>
             <Button Text="Sumuj cenę produktów"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
