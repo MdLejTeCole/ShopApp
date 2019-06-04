@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Shopping.Lista">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor="Yellow">
             <Button Text="Nowa lista zakupów"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" 
@@ -14,7 +14,8 @@
                 Clicked="Button_Clicked"/>
             <Button Text="Sumuj cenę produktów"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand"
+                Clicked="Button_Clicked_1"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

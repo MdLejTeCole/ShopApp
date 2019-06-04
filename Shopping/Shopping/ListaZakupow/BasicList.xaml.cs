@@ -62,7 +62,7 @@ namespace Shopping.ListaZakupow
             SqlConnection sqlConnection = new SqlConnection("Server=tcp:mdlejtecole.database.windows.net,1433;Initial Catalog=ShopApp2;Persist Security Info=False;" +
                "User ID=MDlejtecole;Password=muza!345;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             sqlConnection.Open();
-            DateTime date = new DateTime();
+            
             DateTime thisDay = DateTime.Today;
             string date1 = string.Format("{0:yyyy-MM-dd}", thisDay);
             int id = 1;

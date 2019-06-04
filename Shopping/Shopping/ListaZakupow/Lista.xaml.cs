@@ -27,5 +27,10 @@ namespace Shopping
         {
             Navigation.PushAsync(new ShowList());
         }
+
+        private void Button_Clicked_1(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ListWithCost());
+        }
     }
 }

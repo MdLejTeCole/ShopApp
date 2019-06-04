@@ -18,7 +18,7 @@ namespace Shopping
         public ShowList()
         {
             InitializeComponent();
-            DateTime date = new DateTime();
+            
             List<ListToOpen> myList = new List<ListToOpen>
             {
             };

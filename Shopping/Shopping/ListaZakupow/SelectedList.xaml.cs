@@ -35,7 +35,7 @@ namespace Shopping.ListaZakupow
             reader.Close();
             for (int i = 0; i < a; i++)
             {
-                int b = i + 1;
+                int b = a-i;
                 cmd = new SqlCommand("select top 1 * from( select DISTINCT top " +b+ " IdKategoria from ListaZakupow where DataListy LIKE '" +
                     date2 + "%' order by IdKategoria asc) a order by IdKategoria desc", sqlConnection);
                 

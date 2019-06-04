@@ -8,7 +8,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell >
-                        <StackLayout Orientation="Horizontal">
+                        <StackLayout Orientation="Horizontal"  Padding="10,10,10,10">
                             <Label Text="{Binding Categoria}" />
                             <StackLayout HorizontalOptions="StartAndExpand">
                                 
