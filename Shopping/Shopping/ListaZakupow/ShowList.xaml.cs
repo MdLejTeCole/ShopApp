@@ -22,8 +22,7 @@ namespace Shopping
             List<ListToOpen> myList = new List<ListToOpen>
             {
             };
-            SqlConnection sqlConnection = new SqlConnection("Server=tcp:mdlejtecole.database.windows.net,1433;Initial Catalog=ShopApp2;Persist Security Info=False;" +
-            "User ID=MDlejtecole;Password=muza!345;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            SqlConnection sqlConnection = new SqlConnection("");
             sqlConnection.Open();
             SqlCommand cmd = new SqlCommand("select COUNT(DISTINCT DataListy) from ListaZakupow", sqlConnection);
             SqlDataReader reader = cmd.ExecuteReader();

@@ -25,8 +25,7 @@ namespace Shopping.ListaZakupow
             date2 += date1.Remove(0, 3) + "-";
             date1 = date.Remove(2);
             date2 += date1;
-            SqlConnection sqlConnection = new SqlConnection("Server=tcp:mdlejtecole.database.windows.net,1433;Initial Catalog=ShopApp2;Persist Security Info=False;" +
-            "User ID=MDlejtecole;Password=muza!345;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            SqlConnection sqlConnection = new SqlConnection("");
             sqlConnection.Open();
             SqlCommand cmd = new SqlCommand("select COUNT(DISTINCT IdKategoria) from ListaZakupow Where DataListy LIKE '" + date2 + "%'", sqlConnection);
             SqlDataReader reader = cmd.ExecuteReader();
